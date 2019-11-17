@@ -73,11 +73,11 @@ class ViewController: UIViewController {
             return
         }
 
-        var resultString = "Это не кот!"
+        var resultString = "This is not a cat!"
         results[0...3].forEach {
             let identifer = $0.identifier.lowercased()
             if identifer.range(of: " cat") != nil || identifer.range(of: "cat ") != nil || identifer == "cat" {
-                resifultString = "Это кот!"
+                resultString = "This is a cat!"
             }
         }
         DispatchQueue.main.async {
